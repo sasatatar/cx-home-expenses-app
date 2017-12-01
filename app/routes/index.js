@@ -23,13 +23,13 @@ export default <cx>
         <Route route="~/about" url:bind="url">
             <About/>
         </Route>
-       <Route route="~/dashboard" url:bind="url">
-          <Dashboard/>
-       </Route>
-       <UserRoutes/>
-       <Section title="Page Not Found" mod="card">
-          This page doesn't exists. Please check your URL.
-       </Section>
+        <Route route="~/dashboard" url:bind="url">
+            <Dashboard/>
+        </Route>
+        <UserRoutes/>
+        <Section title="Page Not Found" mod="card">
+            This page doesn't exists. Please check your URL.
+        </Section>
     </Sandbox>
 </cx>
 
