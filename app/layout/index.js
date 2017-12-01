@@ -1,5 +1,5 @@
 import {HtmlElement, Link, Button} from 'cx/widgets';
-import {ContentPlaceholder} from 'cx/ui';
+import {ContentPlaceholder, bind} from 'cx/ui';
 import Controller from "./Controller";
 
 export default <cx>
@@ -26,36 +26,23 @@ export default <cx>
          <ContentPlaceholder name="header"/>
       </header>
       <aside class="aside">
-         <h1>Cx App</h1>
+         <h1>Home Expenses</h1>
          <dl>
             <dt>
-               App
+               <Link href="~/dashboard" url={bind("url")}>
+                     Dashboard
+               </Link>
             </dt>
-            <dd>
-               <Link href="~/" url:bind="url">
-                  Home
-               </Link>
-            </dd>
-            <dd>
-               <Link href="~/dashboard" url:bind="url">
-                  Dashboard
-               </Link>
-            </dd>
-            <dd>
-               <Link href="~/about" url:bind="url">
-                  About
-               </Link>
-            </dd>
-         </dl>
-         <dl>
             <dt>
-               Admin
-            </dt>
-            <dd>
-               <Link href="~/users" url:bind="url" match="prefix">
-                  Users
+               <Link href="~/entry/new" url={bind("url")}>
+                     Add Expense
                </Link>
-            </dd>
+            </dt>
+            <dt>
+               <Link href="~/log" url={bind("url")}>
+                     Log
+               </Link>
+            </dt>
          </dl>
       </aside>
    </div>
