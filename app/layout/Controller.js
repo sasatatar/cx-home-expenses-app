@@ -1,4 +1,5 @@
 import {Controller} from 'cx/ui';
+import { loadBudgetEntries, saveBudgetEntries } from '../data/entries';
 
 export default class extends Controller {
    onInit() {
@@ -8,6 +9,9 @@ export default class extends Controller {
          if (window.innerWidth < 800)
             this.store.set('layout.aside.open', false);
       });
+
+      this.store.init('entries', loadBudgetEntries());
+      this.addTrigger('entries', ['entries'], saveBudgetEntries);
    }
 
    onMainClick(e, {store}) {
