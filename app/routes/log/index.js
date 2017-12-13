@@ -55,7 +55,8 @@ export default <cx>
                         </LinkButton>
                         <Button mod="hollow" 
                             onClick="remove"
-                            confirm="Are you sure you want to delete this entry?">
+                            confirm="Are you sure you want to delete this entry?"
+                        >
                             Remove
                         </Button>
                     </cx>
