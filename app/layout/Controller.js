@@ -11,6 +11,7 @@ export default class extends Controller {
       });
 
       this.store.init('entries', loadBudgetEntries());
+      console.log('---------------- Layout controller: entries loaded!');
       this.addTrigger('entries', ['entries'], saveBudgetEntries);
    }
 
