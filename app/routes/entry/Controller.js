@@ -4,6 +4,8 @@ export default class extends Controller {
     onInit(){
         let id = this.store.get('$route.id');
         let entries = this.store.get('entries');
+
+        if (id == "new") return;
         
         let entry = entries.find(e => e.id == id);
         if (!entry) {
